@@ -80,9 +80,7 @@ class __FormState extends State<_Form> {
           ),
           BotonAzul(
             text: 'Ingrese',
-            onPressed: () {
-              print('object');
-            },
+            onPressed: () {},
           ),
         ],
       ),
