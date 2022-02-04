@@ -37,6 +37,8 @@ class CustomInput extends StatelessWidget {
         controller: textController,
         keyboardType: keyboardType,
         obscureText: isPassword,
+        textInputAction:
+            isPassword ? TextInputAction.done : TextInputAction.next,
         decoration: InputDecoration(
           prefixIcon: Icon(icon),
           focusedBorder: InputBorder.none,

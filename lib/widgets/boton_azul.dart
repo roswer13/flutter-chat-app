@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class BotonAzul extends StatelessWidget {
-  final Function onPressed;
+  final Function? onPressed;
   final String text;
 
   const BotonAzul({
     Key? key,
-    required this.onPressed,
+    this.onPressed,
     required this.text,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      color: Colors.blue,
+      color: onPressed == null ? Colors.grey[600] : Colors.blue,
       elevation: 2,
       highlightElevation: 5,
       shape: const StadiumBorder(),
@@ -30,7 +30,7 @@ class BotonAzul extends StatelessWidget {
           ),
         ),
       ),
-      onPressed: () => onPressed(),
+      onPressed: onPressed == null ? null : () => onPressed!(),
     );
   }
 }
